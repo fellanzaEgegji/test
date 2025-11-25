@@ -1,0 +1,58 @@
+header{
+   padding: 15px 100px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header img{
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: center;
+}
+.hero{
+    width: 100%;
+}
+.hero img{
+    width: 100%;
+}
+.logo2{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+
+}
+.logo2 img{
+    width: 200px;
+    height: 200px;
+}
+.windows7 img{
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+}
+.windows7{
+    display: flex;
+    gap: 30px;
+}
+.windows7 h3{
+    display: flex;
+    align-items: flex-end;
+    font-size: medium;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.windows7 h4{
+    display: flex;
+    align-items: flex-end;
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
