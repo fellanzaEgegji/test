@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <section class="header">
+        <a href="index.html"><img src="logo.png"></a>
+        <ul>
+            <li><a href="">Meshkuj</a></li>
+            <li><a href="">Femra</a></li>
+            <li><a href="">Femije</a></li>
+        </ul>
+        <div class="icons">
+            <a href=""><img src="search.png" alt=""></a>
+            <a href="register.html"><img src="profile.png" alt=""></a>
+            <a href=""><img src="cart.png" alt=""></a>
+        </div>
+    </section>
+    <!--Struktura e Register Form-->
+    <div class="register-container">
+        <h2>Krijo Llogari</h2>
+        <form class="register-form" id="register-form" novalidate>
+            <div class="form-group">
+                <p>Emri</p>
+                <input type="text" id="emri" name="emri" placeholder="Shkruani emrin" required>
+                <div id="emriError" class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+                <p>Mbiemri</p>
+                <input type="text" id="mbiemri" name="mbiemri" placeholder="Shkruani mbiemrin" required>
+                <div id="mbiemriError" class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+                <p>Email</p>
+                <input type="email" id="email" name="email" placeholder="Shkruani email-in" required>
+                <div id="emailError" class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+                <p>Fjalekalimi</p>
+                <input type="password" id="password" name="password" placeholder="Shkruani fjalekalimin" required>
+                <div id="passwordError" class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+                <p>Konfirmo fjalekalimin</p>
+                <input type="password" id="konfirmim" name="konfirmim" placeholder="Konfirmoni fjalekalimin" required>
+                <div id="confirmError" class="error" aria-live="polite"></div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Pranoj Termat dhe Kushtet</label>
+                <div id="termsError" class="error"></div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="news">
+                <label for="news">Pranoj te marr njoftime me Email & SMS</label>
+            </div>
+            <button type="submit" class="register-button">Regjistrohu</button>
+            <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
+        </form>
+        <p class="signin-text">
+            Ke llogari? <a href="login.html">Kycu ketu.</a>
+        </p>
+    </div>
+    <section class="footer">
+        <div class="container">
+            <div class="left">
+                <h2>Na kontaktoni</h2>
+                <p>049123123</p>
+                <p>044123123</p>
+                <div class="socials">
+                    <a href=""><img src="instagram.png" alt=""></a>
+                    <a href=""><img src="facebook.png" alt=""></a>
+                    <a href=""><img src="mail.png" alt=""></a>
+                </div>
+            </div>
+            <div class="list">
+                <h2>Loakcionet</h2>
+                <p>Albi Mall, Prishtine</p>
+                <p>Galeria Shopping Mall, Prizren</p>
+                <p>Ferizaj</p>
+            </div>
+            <div class="list">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="about-us.html">Rreth nesh</a></li>
+                    <li><a href="contact-us.html">Kontakti</a></li>
+                    <li><a href="">Shporta e blerjeve</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Te gjitha te drejtat e rezervuara</p>
+        </div>
+    </section>
+    <script src="register1.js">
+    </script>
+</body>
+</html>
