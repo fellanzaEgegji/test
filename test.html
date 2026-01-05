@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials Slider</title>
+<style>
+    :root{
+    --gray: #EAE9EB;
+}
+.header{
+    padding: 15px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    height: 50px;
+}
+.header ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: center;
+}
+.header a{
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.icons img{
+    width: 30px;
+    height: 30px;
+}
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: #fff;
+        color: #333;
+        text-align: center;
+    }
+
+    .testimonial-container {
+        max-width: 500px;
+        margin: 50px auto;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    .testimonial {
+        display: none;
+        padding: 30px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        font-style: italic;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .testimonial.active {
+        display: block;
+    }
+
+    .author {
+        margin-top: 15px;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .slider-buttons {
+        margin-top: 20px;
+    }
+
+    .slider-buttons button {
+        padding: 8px 15px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 5px;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .slider-buttons button:hover {
+        background: #555;
+    }
+    
+
+.footer .container{
+    margin: 20px 150px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: light;
+}
+.socials{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.socials img{
+    width: 30px;
+    padding-right: 10px;
+}
+.list ul{
+    padding-left: 0px;
+    align-items: flex-start;
+    list-style: none;
+}
+.list ul li{
+  padding-bottom: 10px;
+}
+.list ul a{
+    text-decoration: none;
+    color: black;
+}
+.copyright{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: var(--gray);
+    padding: 5px;
+}
+</style>
+</head>
+<body>
+<!--Header-->
+    <section class="header">
+            <a href="index.html"><img src="logo.png"></a>
+            <ul>
+                <li><a href="">Meshkuj</a></li>
+                <li><a href="">Femra</a></li>
+                <li><a href="">Fëmijë</a></li>
+            </ul>
+            <div class="icons">
+                <a href=""><img src="search.png" alt=""></a>
+                <a href="login.html"><img src="profile.png" alt=""></a>
+                <a href=""><img src="cart.png" alt=""></a>
+            </div>
+    </section>
+
+
+<div class="testimonial-container">
+    <div class="testimonial active">
+        "Shumë i kënaqur me blerjen, cilësi e shkëlqyer!"
+        <div class="author">- Ana K.</div>
+    </div>
+    <div class="testimonial">
+        "Shërbim i shpejtë dhe produktet janë të bukura."
+        <div class="author">- Blerim P.</div>
+    </div>
+    <div class="testimonial">
+        "Eksperiencë shumë e mirë, padyshim do të rikthehem."
+        <div class="author">- Elira D.</div>
+    </div>
+
+    <div class="slider-buttons">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+    </div>
+</div>
+
+<!--Footer-->
+    <section class="footer">
+            <div class="container">
+                <div class="left">
+                    <h2>Na kontaktoni</h2>
+                    <p>049 123 123</p>
+                    <p>044 123 123</p>
+                    <div class="socials">
+                        <a href=""><img src="library/instagram.png" alt="instagram logo"></a>
+                        <a href=""><img src="library/facebook.png" alt="facebook logo"></a>
+                        <a href=""><img src="library/mail.png" alt="mail logo"></a>
+                    </div>
+                </div>
+                <div class="list">
+                    <h2>Lokacionet</h2>
+                    <p>Albi Mall, Prishtinë</p>
+                    <p>Galeria Shopping Mall, Prizren</p>
+                    <p>Ferizaj</p>
+                </div>
+                
+                <div class="list">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="about-us.html">Rreth Nesh</a></li>
+                        <li><a href="contact-us.html">Kontakti</a></li>
+                        <li><a href="">Shporta e Blerjeve</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Të gjitha të drejtat e rezervuara</p>
+            </div>
+        </section>
+
+<script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+
+    document.getElementById('next').onclick = () => {
+        testimonials[index].classList.remove('active');
+        index = (index + 1) % testimonials.length;
+        testimonials[index].classList.add('active');
+    }
+
+    document.getElementById('prev').onclick = () => {
+        testimonials[index].classList.remove('active');
+        index = (index - 1 + testimonials.length) % testimonials.length;
+        testimonials[index].classList.add('active');
+    }
+
+    // Auto-slide çdo 5 sekonda
+    setInterval(() => {
+        testimonials[index].classList.remove('active');
+        index = (index + 1) % testimonials.length;
+        testimonials[index].classList.add('active');
+    }, 5000);
+</script>
+
+</body>
+</html>
